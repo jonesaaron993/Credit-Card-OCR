@@ -1,0 +1,49 @@
+﻿<Window x:Class="Credit_Card_OCR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Credit_Card_OCR"
+        mc:Ignorable="d"
+        Title="Credit Card Detection" Height="450" Width="800" Background="#472B21">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height ="50"/>
+                    <RowDefinition Height ="50"/>
+                    <RowDefinition Height ="50"/>
+                    <RowDefinition Height ="50"/>
+                    <RowDefinition Height ="50"/>
+                    <RowDefinition Height ="125"/>
+                    <RowDefinition Height ="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnOCR" Content="Detect" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Click="btnOCR_Click"/>
+                <Button x:Name="btnStart" Content="Start Camera" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Click="btnStart_Click"/>
+                <Button x:Name="btnOpen" Content="Open Image" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Click="btnOpen_Click"/>
+                <Button x:Name="btnCapture" Content="Capture" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" Click="btnCapture_Click" IsEnabled="False"/>
+                <Button x:Name="btnClear" Content="Clear" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="6" VerticalAlignment="Stretch" Click="btnClear_Click"/>
+                <Image x:Name="imgOutput" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.RowSpan="6" Stretch="Fill"/>
+                <ListBox x:Name="lstOutput" VerticalContentAlignment="Stretch" Grid.Column="1" Grid.Row="6" HorizontalContentAlignment="Stretch"/>
+            </Grid>
+        </StackPanel>
+
+        <Frame x:Name="frame" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>

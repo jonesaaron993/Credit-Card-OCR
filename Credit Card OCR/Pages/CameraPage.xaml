@@ -1,0 +1,22 @@
+﻿<Page x:Class="Credit_Card_OCR.Pages.CameraPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Credit_Card_OCR.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="700"
+      Title="CameraPage">
+
+    <Grid Background="#472B21">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="webcamOutput" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Stretch="Fill"/>
+
+    </Grid>
+</Page>
