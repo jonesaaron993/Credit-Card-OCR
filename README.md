@@ -2,7 +2,7 @@
 
 Created in C# using the wrapper of Opencv called Emgucv, this repo was created as a side project of mine to practice computer vison and character recognition.
 
-**IMPORTANT:** You must download the EMGUCV nuget package, which in turn will install the ZedGraph nuget package. You **MUST** do this step to get the project to run successfully.
+**Important:** In order to successfuly compile and run each solution, you **MUST** download and install the Emgu.CV.runtime.windows nuget package. If error persists, just restart your IDE.
 
 <p align="center">
   <img src="https://github.com/CodeBoiz/Credit-Card-OCR/blob/master/Credit%20Card%20OCR/Images/creditCard.png"/>
