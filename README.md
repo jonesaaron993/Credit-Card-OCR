@@ -2,8 +2,10 @@
 
 Created in C# using the wrapper of Opencv called Emgucv, this repo was created as a side project of mine to practice computer vison and character recognition.
 
+**IMPORTANT:** You must download the EMGUCV nuget package, which in turn will install the ZedGraph nuget package. You **MUST** do this step to get the project to run successfully.
+
 <p align="center">
-  <img src="https://github.com/jonesaaron993/CreditCardOCR/blob/master/Credit%20Card%20OCR/Images/creditCard.png"/>
+  <img src="https://github.com/CodeBoiz/Credit-Card-OCR/blob/master/Credit%20Card%20OCR/Images/creditCard.png"/>
 </p>
 
 All contours found with bounding boxes created.
