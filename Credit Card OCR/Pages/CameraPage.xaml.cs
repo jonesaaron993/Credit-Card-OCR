@@ -19,7 +19,7 @@ namespace Credit_Card_OCR.Pages
         {
             InitializeComponent();
 
-            //Start grabbing frames from the webcame input
+            //Start grabbing frames from the webcam input
             stream.ImageGrabbed += Capture_ImageGrabbed1;
             stream.Start();
         }
