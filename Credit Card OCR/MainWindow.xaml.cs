@@ -13,9 +13,13 @@ namespace Credit_Card_OCR
     /// </summary>
     public partial class MainWindow : Window
     {
+        ImageListOutputPage outputPage = new ImageListOutputPage();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            frame.Content = outputPage;
         }
 
         //Mat object to hold image that is taken
@@ -53,7 +57,7 @@ namespace Credit_Card_OCR
                     Bitmap bit = img.ToBitmap();
 
                     //Pass the bitmap image to be displayed
-                    imgOutput.Source = ImageUtils.ImageSourceFromBitmap(bit);
+                    outputPage.imgOutput.Source = ImageUtils.ImageSourceFromBitmap(bit);
                 }
                 else
                 {
@@ -62,7 +66,7 @@ namespace Credit_Card_OCR
 
                     //Convert the image to a bitmap, then to an image source
                     Bitmap bit = img.ToBitmap();
-                    imgOutput.Source = ImageUtils.ImageSourceFromBitmap(bit);
+                    outputPage.imgOutput.Source = ImageUtils.ImageSourceFromBitmap(bit);
                 }
 
                 //Detect the text from the image
@@ -75,7 +79,7 @@ namespace Credit_Card_OCR
                 output.Add(detectedText);
 
                 //Display the list
-                lstOutput.ItemsSource = output;
+                outputPage.lstOutput.ItemsSource = output;
             }
             else
             {
@@ -123,7 +127,7 @@ namespace Credit_Card_OCR
             {
                 //Convert the image to a bitmap, then to an image source
                 Bitmap bit = img.ToBitmap();
-                imgOutput.Source = ImageUtils.ImageSourceFromBitmap(bit);
+                outputPage.imgOutput.Source = ImageUtils.ImageSourceFromBitmap(bit);
 
                 //Declare the bool variable that an image has been loaded
                 isImageLoaded = true;
@@ -138,28 +142,31 @@ namespace Credit_Card_OCR
 
             if (taken != null)
             {
-                imgOutput.Source = ImageUtils.ImageSourceFromBitmap(taken);
+                outputPage.imgOutput.Source = ImageUtils.ImageSourceFromBitmap(taken);
             }
 
             //Declare that image is used
             isImageLoaded = true;
 
+            //Enable the detect button
+            btnOCR.IsEnabled = true;
+
             //Clear the frame
-            frame.Content = null;
+            frame.Content = outputPage;
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             //Clear the image
-            imgOutput.Source = null;
+            outputPage.imgOutput.Source = null;
 
             //Clear the frame
-            frame.Content = null;
+            frame.Content = outputPage;
 
             //Empty the list box
-            if (lstOutput.Items.Count > 0)
+            if (outputPage.lstOutput.Items.Count > 0)
             {
-                lstOutput.ItemsSource = null;
+                outputPage.lstOutput.ItemsSource = null;
             }
 
             //Set both bool variables to false
