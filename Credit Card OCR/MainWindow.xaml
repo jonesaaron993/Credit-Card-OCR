@@ -33,13 +33,11 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="btnOCR" Content="Detect" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Click="btnOCR_Click"/>
-                <Button x:Name="btnStart" Content="Start Camera" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Click="btnStart_Click"/>
-                <Button x:Name="btnOpen" Content="Open Image" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Click="btnOpen_Click"/>
-                <Button x:Name="btnCapture" Content="Capture" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" Click="btnCapture_Click" IsEnabled="False"/>
-                <Button x:Name="btnClear" Content="Clear" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="6" VerticalAlignment="Stretch" Click="btnClear_Click"/>
-                <Image x:Name="imgOutput" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.RowSpan="6" Stretch="Fill"/>
-                <ListBox x:Name="lstOutput" VerticalContentAlignment="Stretch" Grid.Column="1" Grid.Row="6" HorizontalContentAlignment="Stretch"/>
+                <Button x:Name="btnOCR" Content="Detect" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Click="btnOCR_Click"/>
+                <Button x:Name="btnStart" Content="Start Camera" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Click="btnStart_Click"/>
+                <Button x:Name="btnOpen" Content="Open Image" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Click="btnOpen_Click"/>
+                <Button x:Name="btnCapture" Content="Capture" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" Click="btnCapture_Click" IsEnabled="False"/>
+                <Button x:Name="btnClear" Content="Clear" Grid.Column="0" Style="{StaticResource MetroButtonAllert}" HorizontalAlignment="Stretch" Grid.Row="6" VerticalAlignment="Stretch" Click="btnClear_Click"/>
             </Grid>
         </StackPanel>
 
