@@ -1,0 +1,7 @@
+Here are the links for all the icons to comply with the licensing terms of www.icons8.com
+
+cameraIcon: https://img.icons8.com/material-outlined/24/000000/camera--v2.png
+clearIcon: https://img.icons8.com/material-rounded/24/000000/delete-sign.png
+folderIcon: https://img.icons8.com/material-outlined/100/000000/folder-invoices.png
+ocrIcon: https://img.icons8.com/carbon-copy/100/000000/printed-ocr.png
+startIcon: https://img.icons8.com/material-outlined/24/000000/start.png

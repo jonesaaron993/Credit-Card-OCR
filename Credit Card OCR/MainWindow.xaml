@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Credit_Card_OCR"
         mc:Ignorable="d"
-        Title="Credit Card Detection" Height="450" Width="800" Background="#472B21">
+        Title="Credit Card Detection" Height="450" Width="800" Background="DarkTurquoise">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,7 +25,7 @@
                     <RowDefinition Height ="50"/>
                     <RowDefinition Height ="50"/>
                     <RowDefinition Height ="50"/>
-                    <RowDefinition Height ="125"/>
+                    <RowDefinition Height ="110"/>
                     <RowDefinition Height ="50"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -33,11 +33,40 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="btnOCR" Content="Detect" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Click="btnOCR_Click"/>
-                <Button x:Name="btnStart" Content="Start Camera" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Click="btnStart_Click"/>
-                <Button x:Name="btnOpen" Content="Open Image" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Click="btnOpen_Click"/>
-                <Button x:Name="btnCapture" Content="Capture" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" Click="btnCapture_Click" IsEnabled="False"/>
-                <Button x:Name="btnClear" Content="Clear" Grid.Column="0" Style="{StaticResource MetroButtonAllert}" HorizontalAlignment="Stretch" Grid.Row="6" VerticalAlignment="Stretch" Click="btnClear_Click"/>
+                <Button x:Name="btnOCR" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" Grid.Row="1" Click="btnOCR_Click">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Grid.Column="0">
+                        <Image Source="Resources\ocrIcon.png" HorizontalAlignment="Center" Stretch="Uniform" Height="30" Width="50"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="Capture Image"/></TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnStart" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Click="btnStart_Click">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Grid.Column="0">
+                        <Image Source="Resources\startIcon.png" HorizontalAlignment="Center" Stretch="Uniform" Height="30" Width="50"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="Start Camera"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <Button x:Name="btnOpen" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Click="btnOpen_Click">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Grid.Column="0">
+                        <Image Source="Resources\folderIcon.png" HorizontalAlignment="Center" Stretch="Uniform" Height="30" Width="50"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="Open Image"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <Button x:Name="btnCapture" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" Click="btnCapture_Click" IsEnabled="False">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Grid.Column="0">
+                        <Image Source="Resources\cameraIcon.png" HorizontalAlignment="Center" Stretch="Uniform" Height="30" Width="50"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="Capture"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <Button x:Name="btnClear" Grid.Column="0" Style="{StaticResource MetroButtonAllert}" HorizontalAlignment="Stretch" Grid.Row="6" VerticalAlignment="Stretch" Click="btnClear_Click">
+                    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Grid.Column="0">
+                        <Image Source="Resources\clearIcon.png" HorizontalAlignment="Center" Stretch="Uniform" Height="30" Width="50"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="Clear"/></TextBlock>
+                    </StackPanel>
+                </Button>
             </Grid>
         </StackPanel>
 

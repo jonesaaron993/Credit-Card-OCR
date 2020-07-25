@@ -1,6 +1,7 @@
 ﻿using Emgu.CV;
 using Emgu.CV.Structure;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Credit_Card_OCR
 {

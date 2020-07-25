@@ -18,10 +18,6 @@ namespace Credit_Card_OCR.Pages
         public CameraPage()
         {
             InitializeComponent();
-
-            //Start grabbing frames from the webcam input
-            stream.ImageGrabbed += Capture_ImageGrabbed1;
-            stream.Start();
         }
 
         public Bitmap GenerateTakenImage()
@@ -40,20 +36,37 @@ namespace Credit_Card_OCR.Pages
             //Get the frame
             Bitmap frame = CameraConfig.GetFrame(stream);
 
-            //Try catch block to successfuly terminate the thread
-            try
+            //Check if the frame taken is null
+            //if it is, that means that no camera is connected,
+            //so output that to the user and end the subscription
+            if (frame == null)
             {
-                //Pass each frame from the video capture to the output image
-                this.Dispatcher.Invoke(() =>
+                MessageBox.Show("There is no camera connected");
+                stream.ImageGrabbed -= Capture_ImageGrabbed1;
+            }
+            else
+            {
+                try
                 {
-                    webcamOutput.Source = ImageUtils.ImageSourceFromBitmap(frame);
-                });
+                    //Pass each frame from the video capture to the output image
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        webcamOutput.Source = ImageUtils.ImageSourceFromBitmap(frame);
+                    });
+                }
+                catch (System.Threading.Tasks.TaskCanceledException)
+                {
+                    //End the thread if its exited early
+                    this.Dispatcher.InvokeShutdown();
+                }
             }
-            catch (System.Threading.Tasks.TaskCanceledException)
-            {
-                //End the thread if its exited early
-                this.Dispatcher.InvokeShutdown();
-            }
+        }
+
+        private void btnCapture_Click(object sender, RoutedEventArgs e)
+        {
+            //Start grabbing frames from the webcam input
+            stream.ImageGrabbed += Capture_ImageGrabbed1;
+            stream.Start();
         }
     }
 }
