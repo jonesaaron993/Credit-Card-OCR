@@ -13,7 +13,7 @@ namespace Credit_Card_OCR
         /// <summary>
         /// Get the frame of the current video stream
         /// </summary>
-        /// <param name="stream">The videocapture stream that holds the video data</param>
+        /// <param name="stream">The video capture stream that holds the video data</param>
         /// <returns>A bitmap image</returns>
         public static Bitmap GetFrame(VideoCapture stream)
         {
@@ -26,7 +26,7 @@ namespace Credit_Card_OCR
             //Convert the frame into a bitmap
             Bitmap frame = m.ToBitmap();
 
-            //Return the bitap
+            //Return the bitmap
             return frame;
         }
 
@@ -40,10 +40,10 @@ namespace Credit_Card_OCR
             //Pause the stream so an image can be taken
             stream.Pause();
 
-            //Query the stream and get the latet fram as an image
+            //Query the stream and get the latest frame as an image
             var inputImg = stream.QueryFrame().ToImage<Bgr, byte>();
 
-            //Wait key so video stream can completly stop
+            //Wait key so video stream can completely stop
             CvInvoke.WaitKey(100);
 
             //Return the image
