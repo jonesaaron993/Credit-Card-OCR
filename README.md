@@ -20,6 +20,12 @@ Bounding Boxes Sorted.
   <img src="https://aaronsprogrammingblog.files.wordpress.com/2020/04/finalboxesdrawn.png"/>
 </p>
 
+The current GUI layout
+
+<p align="center">
+  <img src="https://aaronsprogrammingblog.files.wordpress.com/2020/07/mainwindow.png"/>
+</p>
+
 The output of the detected characters 
 
 <p align="center">

@@ -36,7 +36,7 @@
                 <Button x:Name="btnOCR" Grid.Column="0" Style="{StaticResource MetroButtonGreen}" Grid.Row="1" Click="btnOCR_Click">
                     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Grid.Column="0">
                         <Image Source="Resources\ocrIcon.png" HorizontalAlignment="Center" Stretch="Uniform" Height="30" Width="50"/>
-                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="Capture Image"/></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" FontSize="10"><Run Text="OCR"/></TextBlock>
                     </StackPanel>
                 </Button>
 
