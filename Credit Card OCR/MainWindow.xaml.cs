@@ -1,10 +1,10 @@
 ﻿using Credit_Card_OCR.Pages;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows;
-using System.Windows.Forms;
 
 namespace Credit_Card_OCR
 {
@@ -109,7 +109,7 @@ namespace Credit_Card_OCR
             };
 
             //If a photo is selected, do the following
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (dialog.ShowDialog() == true)
             {
                 //Get the file location of the photo selected
                 fileLocation = dialog.FileName;

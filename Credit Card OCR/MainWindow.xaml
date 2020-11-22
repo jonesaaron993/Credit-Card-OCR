@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Credit_Card_OCR"
         mc:Ignorable="d"
-        Title="Credit Card Detection" Height="450" Width="800" Background="DarkTurquoise">
+        Title="Credit Card Detection" Height="450" Width="800" Background="Aqua">
 
     <Grid>
         <Grid.RowDefinitions>
